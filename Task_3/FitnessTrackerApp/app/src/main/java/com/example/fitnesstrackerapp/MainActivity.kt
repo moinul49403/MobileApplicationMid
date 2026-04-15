@@ -58,14 +58,15 @@ class MainActivity : AppCompatActivity() {
             .setView(input)
             .setPositiveButton("Update") { _, _ ->
                 val value = input.text.toString().trim()
+                val parsedSteps = value.toIntOrNull()
 
-                if (value.isNotEmpty()) {
-                    currentSteps = value.toInt()
+                if (parsedSteps != null && parsedSteps >= 0) {
+                    currentSteps = parsedSteps
                     updateProgress()
                 } else {
                     Toast.makeText(
                         this,
-                        "Please enter a valid number",
+                        "Please enter a valid non-negative number",
                         Toast.LENGTH_SHORT
                     ).show()
                 }
