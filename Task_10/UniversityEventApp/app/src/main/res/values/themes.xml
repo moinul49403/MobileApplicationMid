@@ -1,0 +1,9 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <style name="Base.Theme.UniversityEventApp" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+        <item name="colorPrimary">@color/primary_blue</item>
+        <item name="colorPrimaryVariant">@color/primary_blue</item>
+        <item name="colorSecondary">@color/accent_orange</item>
+    </style>
+
+    <style name="Theme.UniversityEventApp" parent="Base.Theme.UniversityEventApp" />
+</resources>

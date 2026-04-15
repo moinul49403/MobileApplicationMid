@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="primary_blue">#1565C0</color>
+    <color name="accent_orange">#FF6F00</color>
+    <color name="seat_available">#4CAF50</color>
+    <color name="seat_booked">#F44336</color>
+    <color name="seat_selected">#2196F3</color>
+    <color name="card_bg">#FFFFFF</color>
+    <color name="bg_light">#F5F5F5</color>
+    <color name="text_primary">#212121</color>
+    <color name="text_secondary">#757575</color>
+</resources>

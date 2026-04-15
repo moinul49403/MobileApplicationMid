@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="?attr/colorPrimary"
+        app:title="Select Seats"
+        app:titleTextColor="@android:color/white" />
+    <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:text="STAGE" android:gravity="center" android:padding="8dp" android:background="#DDD" android:layout_margin="16dp"/>
+    <GridLayout
+        android:id="@+id/seatGrid"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:layout_gravity="center_horizontal"
+        android:columnCount="6"
+        android:rowCount="8" />
+    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:padding="8dp" android:gravity="center">
+        <View android:layout_width="16dp" android:layout_height="16dp" android:background="@color/seat_available" android:layout_marginEnd="4dp"/>
+        <TextView android:text="Available" android:layout_marginEnd="16dp"/>
+        <View android:layout_width="16dp" android:layout_height="16dp" android:background="@color/seat_booked" android:layout_marginEnd="4dp"/>
+        <TextView android:text="Booked" android:layout_marginEnd="16dp"/>
+        <View android:layout_width="16dp" android:layout_height="16dp" android:background="@color/seat_selected" android:layout_marginEnd="4dp"/>
+        <TextView android:text="Selected"/>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="16dp"
+        android:orientation="horizontal"
+        android:gravity="center_vertical">
+        <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:orientation="vertical">
+            <TextView android:id="@+id/selectedSeatsText" android:text="0 Seats Selected"/>
+            <TextView android:id="@+id/totalPriceText" android:text="Total: $0.00" android:textStyle="bold" android:textSize="16sp"/>
+        </LinearLayout>
+        <Button
+            android:id="@+id/confirmBookingButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Confirm Booking"/>
+    </LinearLayout>
+</LinearLayout>
